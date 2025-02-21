@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.ibb.co/Z6wgx1RV/hari-naidu-fav-pic.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 100px 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section:nth-child(even) {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .project {
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .section {
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .skill-box {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            width: 200px;
+            height: 100px;
+        }
+
+        .skill-box .content {
+            display: none;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .skill-box:hover .content {
+            display: block;
+            animation: surprise 0.5s forwards;
+        }
+
+        @keyframes surprise {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        .education-item {
+            margin: 20px 0;
+        }
+
+        .education-photo {
+            margin: 10px auto;
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .profile-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .contact-icons img {
+            margin: 10px;
+            width: 30px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .contact-icons img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#family">Family</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="section">
+        <h1>Welcome to My Portfolio<br></h1>
+        <img src="https://i.ibb.co/ynKL7qjb/hari-naidu-formal.jpg" alt="Profile Photo" class="profile-photo">
+        <p></p>
+    </section>
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Here's a brief introduction about myself...</p>
+        <p>"I am Koraseeka Hari Sai Venkat, a forward-thinking B.Tech student specializing in Computer Science and Artificial Intelligence & Machine Learning at Praul University. Passionate about cutting-edge AI technologies, I thrive on solving complex problems through innovation and data-driven solutions. With a keen interest in machine learning, deep learning, and automation, I aim to contribute to the future of intelligent systems. Always eager to learn and explore, I am committed to bridging the gap between theory and real-world applications in the field of AI."
+</p>
+    </section>
+    <section id="family" class="section">
+        <h2>Family</h2>
+        <p>Details about your family...
+        my father name is koraseeka.veerayya,
+        he is a farmer and
+        my mother name is koraseeka lakshmi,
+        she is a housewife
+        </p>
+        <img src="https://i.ibb.co/zHmcKzqs/hri-naidu-family.jpg" alt="Family Photo" class="family-photo">
+    </section>
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill-box" onclick="showSkills(this)">
+                <div class="content">C, C++, JAVA & HTML</div>
+                Tap to Reveal
+            </div>
+            <!-- Add more skills as needed -->
+        </div>
+    </section>
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>School: Hayagreeva Elite School, Chintalapudi</h3>
+            <p>Details about your school...</p>
+            <img src="https://i.ibb.co/4Zc4wF0z/hayagreeva-elite-school-ctp.jpg" alt="Hayagreeva Elite School" class="education-photo">
+        </div>
+        <div class="education-item">
+            <h3>Inter: I completed my inter at Vidya Vikas, Eluru</h3>
+            <p>Details about your college...</p>
+            <img src="https://i.ibb.co/WWYFWFRK/vidya-vikas-eluru.jpg" alt="Vidya Vikas, Eluru" class="education-photo">
+        </div>
+        <div class="education-item">
+            <h3>College: I am studying B.Tech CSE-AIML in Parul University</h3>
+            <img src="https://i.ibb.co/G37Y56Y/parul-university.jpg" alt="Parul University" class="education-photo">
+        </div>
+    </section>
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project Title</h3>
+            <p>Project description...</p>
+        </div>
+    </section>
+    <section id="certificates" class="section">
+        <h2>Certificates</h2>
+        <div class="certificate">
+            <h3>Certificate Title</h3>
+            <p>This certificate is in recognition of my exceptional dedication, leadership, and commitment as a Campus Ambassador</p>
+            <img src="https://i.ibb.co/kgwtLDLf/hari-certificate.jpg" alt="Certificate Image">
+        </div>
+        <!-- Add more certificates as needed -->
+    </section>
+    <section class="section">
+        <img src="path/to/your/new/photo.jpg" alt="New Photo">
+    </section>
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <div class="contact-icons">
+            <a href="https://wa.me/9652216546" 
+                <img src="https://i.ibb.co/hJpzTwZt/whatsap.jpg" alt="WhatsApp">
+            </a>
+            <a href="mailto:harinaidu027@gmail.com">
+                <img src="<a href="<a href="https://ibb.co/7NpJLMFG"><img src="https://i.ibb.co/k6DgvbFh/email.jpg" alt="email" border="0"></a>
+            </a>
+            <a href="https://www.instagram.com/harinaidu546?igsh=amxmdmNnamw2bHNz">
+  
+              <img src="<a href="https://ibb.co/F4bqCpNJ"><img src="https://i.ibb.co/8gD4tkT2/insta.jpg" alt="insta" border="0"></a>"
+              <a href="linkedin contact to https://www.linkedin.com/in/harinaidu-koraseeka-88a5b1303?utm_source=share&utm_campaign=share_via&utm_content=profile&ut
+              m_medium=android_app"
+              
+              
